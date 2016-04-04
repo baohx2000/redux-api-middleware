@@ -1,0 +1,29 @@
+{
+  "name": "redux-api-middleware",
+  "version": "0.0.1",
+  "description": "Redux middleware for handling api requests",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/baohx2000/redux-api-middleware.git"
+  },
+  "keywords": [
+    "redux",
+    "middleware",
+    "api",
+    "request"
+  ],
+  "author": "Gordon Forsythe",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/baohx2000/redux-api-middleware/issues"
+  },
+  "homepage": "https://github.com/baohx2000/redux-api-middleware#readme",
+  "dependencies": {
+    "immutable": "^3.7.6",
+    "lodash": "^4.8.1"
+  }
+}
