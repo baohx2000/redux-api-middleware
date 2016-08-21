@@ -1,8 +1,9 @@
-const _ = require('lodash');
+const extend = require('lodash/extend');
+const omit = requrie('lodash/omit');
 
 export default () => (next) => (action) => {
   function makeAction(suffix, data) {
-    let newAction = _.extend({}, action, { type: action.type + suffix }, data); // eslint-disable-line
+    let newAction = extend({}, action, { type: action.type + suffix }, data); // eslint-disable-line
     delete newAction.promise;
     return newAction;
   }
@@ -16,12 +17,12 @@ export default () => (next) => (action) => {
         response: data.data,
         headers: data.headers,
         statusCode: data.statusCode,
-        originalAction: _.omit(action, 'promise'),
+        originalAction: omit(action, 'promise'),
       })),
       (response) => {
         return next(makeAction('_FAILURE', {
           error: response,
-          originalAction: _.omit(action, 'promise'),
+          originalAction: omit(action, 'promise'),
         }));
       }
     )
