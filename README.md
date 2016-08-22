@@ -3,6 +3,8 @@ middleware for handling api requests
 
 ## Usage
 
+`npm install --save b2k-redux-api-middleware`
+
 ```javascript
 import { getApiReducer, baseState, initial, load, success, fail, reset } from '@baohx2000/redux-api-middleware';
 // Only getApiReducer is actually needed.  The rest are just basic helper objects & methods
