@@ -1,6 +1,6 @@
 {
   "name": "@baohx2000/redux-fetch-client-middleware",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "Redux middleware for handling api requests",
   "main": "index.js",
   "repository": {
