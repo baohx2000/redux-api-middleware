@@ -4,6 +4,7 @@ import getApiReducerFunc, {
   success as successFunc,
   fail as failureFunc,
   reset as resetFunc,
+  baseState,
 } from './src/get-api-reducer';
 import apiMiddlewareFunc from './src/api-middleware';
 
@@ -14,3 +15,4 @@ export const success = successFunc;
 export const failure = failureFunc;
 export const reset = resetFunc;
 export const apiMiddleware = apiMiddlewareFunc;
+export const baseState = baseState;

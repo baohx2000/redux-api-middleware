@@ -12,16 +12,17 @@ export default () => (next) => (action) => {
     // Pass along a new action with the promise stripped out, a suffix added to the action type
     // and optionally some additional data
     next(makeAction(''));
+    next(makeAction('.LOAD'));
     action.promise.then(
-      (data) => next(makeAction('_SUCCESS', {
+      (data) => next(makeAction('.SUCCESS', {
         response: data.data,
         headers: data.headers,
         statusCode: data.statusCode,
         originalAction: omit(action, 'promise'),
       })),
       (response) => {
-        return next(makeAction('_FAILURE', {
-          error: response,
+        return next(makeAction('.FAILURE', {
+          response: response,
           originalAction: omit(action, 'promise'),
         }));
       }
